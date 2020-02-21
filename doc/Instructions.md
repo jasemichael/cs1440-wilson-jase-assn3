@@ -3,62 +3,7 @@
 ## Important!
 **I have _specifically_  instructed the tutors in the Tutor Lab to  _not_  help you with the second portion of the assignment until you have completed the first draft of a UML class diagram.  Don't even think about writing code until you have thought through the design. Many software projects have gone awry because the design step had been neglected. Don't become another statistic - think first, code after.**
 
-
-## Part 0: The design phase
-
-0.  Carefully study the Program Requirements Specification and the starter code
-1.  Create a UML class diagram that describes the starter code
-    *   Unit tests are *not* included in the class diagram
-2.  Design new classes, methods and data members to satisfy the customer's
-    requirements
-3.  Add these new components to your UML class diagram
-4.  Write your Software Development Plan in tandem with your UML class diagram.
-    What you put into words in the plan should match your diagram.
-5.  Create a first draft of the user's manual describing the expected
-    interface.  The interface may change as you begin implementing the project,
-    but you should strive to follow the design described by your manual.
-
-
-## What to submit for the design phase
-
-0.  Save your UML class diagram as an image (PNG or PDF are preferred) in the
-    `doc/` directory of your repository.  Verify that your image is legible by
-    looking at it in your browser once it has been pushed to GitLab.  In the
-    past, students have submitted images with black or transparent backgrounds
-    which render the image unreadable.
-1.  Your software development plan in the `doc/` directory.
-2.  The first draft of the user's manual in the `doc/` directory.
-3.  Tag the final commit of the design phase with the name `designed`.
-    Explicitly push this tag to GitLab before midnight on March 6th:
-    ```
-    $ git tag designed
-    $ git push origin designed
-    ```
-
-
-### Drawing a UML class diagram
-
-You may draw your UML class diagram using any software you prefer.  A simple
-tool that I recommend is [draw.io](https://www.draw.io/)
-
-0.  Visit https://www.draw.io/
-1.  Click "Create New Diagram"
-2.  Select the "Basic" "Blank Diagram" - don't use one of the pre-defined UML templates
-3.  Find the UML section in the accordion list on the left-hand side of the screen
-
-There are multiple shapes available with names like `Class`, `Class 2`, `Class 5`,
-etc.  Make sure that the classes appearing on your diagram have 3 sections as
-described in our lectures.
-
-As you implement your design in Python code in the latter half of the
-assignment you will undoubtedly encounter problems you hadn't foreseen.  Update
-your UML diagram, users manual, and software design plan to match your code as
-your design changes.  Later amendments to these documents *are not counted
-against you* if you had submitted them on-time in the design phase.
-
-
-
-## Overview
+## Program Overview
 
 In this assignment, you will design classes that work together to generate a
 deck of Bingo cards.  Later, you will follow this design to create a working
@@ -79,6 +24,104 @@ The starting project contains a text-based user interface that allows a user to
 create a deck, print a card from the current deck, display the entire deck, or
 save the entire deck to a file.  Unit tests are also provided, though at this
 stage many tests fail as the program is incomplete.
+
+
+## Part 0: The design phase
+
+0.  Carefully study the Program Requirements Specification and the starter code
+1.  Create a UML class diagram that describes the starter code
+    *   Unit tests are *not* included in the class diagram
+2.  Design new classes, methods and data members to satisfy the customer's
+    requirements
+3.  Add these new components to your UML class diagram
+4.  Write your Software Development Plan in tandem with your UML class diagram.
+    What you put into words in the plan should match your diagram.
+5.  Create a first draft of the user's manual describing the expected
+    interface.  The interface may change as you begin implementing the project,
+    but you should strive to follow the design described by your manual.
+6.  Review the UML diagram produced by two (or more) of your study buddies.
+    Write a 250 word peer review for each UML diagram.  Provide a copy of this
+    review to your study buddy so they can use it to improve their design.
+7.  Receive copies of your study buddy's reviews of your own UML class diagram.
+
+
+## What to submit for the design phase
+
+0.  Save your UML class diagram as an image (PNG or PDF are preferred) in the
+    `doc/` directory of your repository.  Verify that your image is legible by
+    looking at it in your browser once it has been pushed to GitLab.  In the
+    past, students have submitted images with black or transparent backgrounds
+    which render the image unreadable and thus ungradeable.
+1.  Your software development plan in the `doc/` directory.
+2.  Your sprint signature in the `doc/` directory.
+3.  The first draft of the user's manual in the `doc/` directory.
+4.  Save the peer reviews that you receive from your study buddies in a file
+    named `doc/My_reviews.md`, and `git add` and `git commit` it to your
+    repository.
+5.  Save the peer reviews that you wrote to your study buddies in files under
+    the `doc/` folder with filenames containing their names. `git add` and `git
+    commit` these files.
+6.  Tag the final commit of the design phase with the name `designed`.
+    Explicitly push this tag to GitLab before midnight on March 6th:
+    ```
+    $ git tag designed
+    $ git push origin designed
+    ```
+
+At this point of the project, your repository will have a file structure like this:
+
+```
+|-- README.md
+|-- doc
+|   |-- Hints.md
+|   |-- Instructions.md
+|   |-- Rubric.md
+|   |-- UML_Class_Diagram.png
+|   |-- Plan.md
+|   |-- Sprint_Signature.md
+|   |-- Manual.md
+|   |-- My_reviews.md
+|   |-- Jordan_Mullen-review.md
+|   `-- Mary_Bartlett-review.md
+`-- src
+    |-- Bingo.py
+    |-- Card.py
+    |-- Deck.py
+    |-- Menu.py
+    |-- MenuOption.py
+    |-- NumberSet.py
+    |-- README.md
+    |-- Testing
+    |   |-- __init__.py
+    |   |-- testCard.py
+    |   |-- testDeck.py
+    |   |-- testMenu.py
+    |   `-- testNumberSet.py
+    |-- UserInterface.py
+    `-- runTests.py
+```
+
+
+### How to draw a UML class diagram
+
+You may draw your UML class diagram using any software you prefer.  A simple
+tool that I recommend is [draw.io](https://www.draw.io/)
+
+0.  Visit https://www.draw.io/
+1.  Click "Create New Diagram"
+2.  Select the "Basic" "Blank Diagram" - don't use one of the pre-defined UML templates
+3.  Find the UML section in the accordion list on the left-hand side of the screen
+
+There are multiple shapes available with names like `Class`, `Class 2`, `Class 5`,
+etc.  Make sure that the classes appearing on your diagram have 3 sections as
+described in our lectures.
+
+As you implement your design in Python code in the latter half of the
+assignment you will undoubtedly encounter problems you hadn't foreseen.  Update
+your UML diagram, users manual, and software design plan to match your code as
+your design changes.  Later amendments to these documents *are not counted
+against you* if you had submitted them on-time in the design phase.
+
 
 
 

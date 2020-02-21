@@ -27,12 +27,6 @@ As you well know, creating a *programming product* can take up to 3x as much
 time as just making a simple program.  Plan for this and carefully manage your
 time so that you can meet the deadline.
 
-This assignment is delivered in two parts:
-
-1. **20 points** A UML class diagram describing the starter code plus your additions to complete the design
-2. **70 points** A working, documented and tested Python programming product that meets the customer's requirements
-
-
 ## Objectives
 
 *   Learn to design before you code
@@ -49,3 +43,37 @@ This assignment is delivered in two parts:
     *   Create or modify tests as your design evolves
     *   Verify that your program is "doing the thing right"
 *   Write a users' manual at the appropriate level of detail
+
+
+## This assignment consists of two deliveries with two due dates
+
+* There is a delivery milestone in the middle of this assignment.
+* You will use a single git repository for both submission.
+* You will use a git tag to mark the boundary between the two deliveries and push your code to gitlab.cs.usu.edu to turn in your work.
+* The grading gift can only be used for the 2nd delivery milestone.
+
+
+### Design phase due Friday, March 6
+
+This is the Friday of Spring Break.  I recommend that you try to get this done *before* Spring Break so you don't forget about it!
+
+This milestone includes the following components:
+
+0.  1st draft of your UML diagram and peer reviews of the UML diagrams of **two** classmates.
+1.  1st draft of your User's Manual.
+2.  Tag the commit that concludes your design phase with the tag name `designed`. Push this tag to GitLab so that it is visible to the graders. The tag `designed` identifies to the graders when your 1st draft documents were completed.  The tag `designed` must be pushed _one week_ before the final due date. If the tag `designed` is missing or applied to a later commit the rubric points allocated to the 1st draft documents will be penalized according to the [late submission policy](https://gitlab.cs.usu.edu/erik.falor/sp20-cs1440-lecturenotes/blob/master/Course_Rules.md#when-to-submit-penalty-of-up-to-100-of-a-submissions-grade).
+
+I recommend [https://www.draw.io/](https://www.draw.io/) for drawing your UML diagrams. I don't really mind which drawing program you use so long as your diagrams
+
+-   Are legible
+-   Represent correct UML, at least as far as was discussed in class
+
+
+### Implementation phase due Friday, March 13th
+
+This submission includes the following components:
+
+0.  The completed program
+1.  A suite of meaningful, non-trivial unit tests
+2.  The final draft of the UML class diagram
+3.  The final draft of your User's Manual
