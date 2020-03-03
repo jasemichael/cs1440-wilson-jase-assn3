@@ -36,9 +36,7 @@ stage many tests fail as the program is incomplete.
 3.  Add these new components to your UML class diagram
 4.  Write your Software Development Plan in tandem with your UML class diagram.
     What you put into words in the plan should match your diagram.
-5.  Create a first draft of the user's manual describing the expected
-    interface.  The interface may change as you begin implementing the project,
-    but you should strive to follow the design described by your manual.
+5.  Create a first draft of the user's manual describing the expected interface.  The interface may change as you begin implementing the project, but you should strive to follow the design described by your manual.
 6.  Review the UML diagram produced by two (or more) of your study buddies.
     Write a 250 word peer review for each UML diagram.  Provide a copy of this
     review to your study buddy so they can use it to improve their design.
@@ -100,6 +98,32 @@ At this point of the project, your repository will have a file structure like th
     |-- UserInterface.py
     `-- runTests.py
 ```
+
+
+### How to write a Users' Manual
+
+The Users' Manual describes only the user interface of the program.  The target
+audience for the manual is somebody with a little familiarity with computers
+and no knowledge of Python.
+
+The manual should answer such questions as
+
+0. How to run the program
+1. What menus will the user see
+2. What responses should the user give in response to those menus
+3. How to perform the basic operations of the program (in our case, how to
+   create a deck, how to print cards in the deck,  how to save a deck to a
+   file, how to quit the program)
+4. What error messages the user may expect, and how to recover from mistakes
+
+You may assume that your user already knows how to open a terminal and navigate
+to the project directory.  
+
+The Users' Manual differs from the Software Development Plan in that it should
+*not* give details about how the program works.  The manual does not need to
+describe the algorithms and data structures used by the program in order to
+guide a user in running it.
+
 
 
 ### How to draw a UML class diagram
