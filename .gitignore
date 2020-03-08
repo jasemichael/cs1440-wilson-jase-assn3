@@ -1,8 +1,7 @@
-venv
+*.idea
 .DS_Store
 .vscode
 __pycache__
 *.pyc
 *.csv
 *.zip
-*.bak
