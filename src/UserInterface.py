@@ -25,10 +25,21 @@ class UserInterface():
         """Command to create a new Deck"""
         # TODO: Get the user to specify the card size, max number, and number of cards
         size = self.__getNumberInput("Card Size: ")
-        max_num = self.__getNumberInput("Max Number: ")
-        num_cards = self.__getNumberInput("Number of Cards: ")
+        while size < 3 or size > 15:
+            print("That is not a valid size!\n")
+            size = self.__getNumberInput("Card Size: ")
+
+        max_num = self.__getNumberInput("\nMax Number: ")
+        while max_num < 2*size*size or max_num > 4*size*size:
+            print("That is not a valid max number!\n")
+            max_num = self.__getNumberInput("Max Number: ")
+
+        num_cards = self.__getNumberInput("\nNumber of Cards: ")
+        while num_cards < 3 or num_cards > 10000:
+            print("That is not a valid number of cards!\n")
+            num_cards = self.__getNumberInput("Number of Cards: ", )
         # TODO: Create a new deck
-        self.__m_currentDeck = Deck()
+        self.__m_currentDeck = Deck.Deck(size, num_cards, max_num)
         # TODO: Display a deck menu and allow use to do things with the deck
         self.__deckMenu()
 
@@ -56,15 +67,17 @@ class UserInterface():
 
     def __printCard(self):
         """Command to print a single card"""
-        cardToPrint = self.__getNumberInput("Id of card to print", 1, self.__m_currentDeck.getCardCount())
-        if cardToPrint > 0:
+        cardToPrint = self.__getNumberInput("Id of card to print: ")#, 1, self.__m_currentDeck.getCardCount())
+        if cardToPrint > 0 and cardToPrint <= self.__m_currentDeck.getCardCount():
             print()
             self.__m_currentDeck.print(idx=cardToPrint)
+        else:
+            print("Can't print card! Invalid card ID!")
 
 
     def __saveDeck(self):
         """Command to save a deck to a file"""
-        fileName = self.__getStringInput("Enter output file name")
+        fileName = self.__getStringInput("Enter output file name: ")
         if fileName != "":
             # TODO: open a file and pass to currentDeck.print()
             outputStream = open(fileName, 'w')
