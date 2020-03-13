@@ -1,13 +1,13 @@
 # Tests the Deck Class
 
 import unittest
-import Deck
+from src.Deck import Deck
 
 
 class TestDeck(unittest.TestCase):
     def setUp(self):
-        self.deck = Deck.Deck(cardSize=7, cardCount=3, numberMax=100)
-        self.deck1 = Deck.Deck(0, 0, 0)
+        self.deck = Deck(cardSize=7, cardCount=3, numberMax=100)
+        self.deck1 = Deck(0, 0, 0)
 
     def test_getCardCount(self):
         self.assertNotEqual(self.deck.getCardCount(), 0)

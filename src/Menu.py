@@ -1,4 +1,4 @@
-import MenuOption
+import src.MenuOption
 
 class Menu(): 
     def __init__(self, header):
@@ -11,7 +11,7 @@ class Menu():
     def addOption(self, command, description):
         """Add an option to the menu"""
         if command is not None and command != "":
-            self.__m_options.append(MenuOption.MenuOption(command, description))
+            self.__m_options.append(src.MenuOption.MenuOption(command, description))
             self.__m_optionCount += 1
 
 

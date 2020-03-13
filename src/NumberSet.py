@@ -6,7 +6,7 @@ class NumberSet():
         self.__size = size
         self.__nums = []
         self.__increment = 0
-        for i in range(1, size):
+        for i in range(1, size+1):
             self.__nums.append(i)
 
     def getSize(self):
@@ -15,7 +15,7 @@ class NumberSet():
 
     def get(self, index):
         """Return an integer: get the number from this NumberSet at an index"""
-        if index >= 0 and index < len(self.__nums)-1:
+        if index >= 0 and index < len(self.__nums):
             return self.__nums[index]
         else:
             return None

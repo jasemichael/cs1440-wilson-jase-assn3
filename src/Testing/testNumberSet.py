@@ -1,12 +1,12 @@
 # Tests the NumberSet Class
 
 import unittest
-import NumberSet
+import src.NumberSet
 
 class TestNumberSet(unittest.TestCase):
     def setUp(self):
-        self.numberSet = NumberSet.NumberSet(18)
-        self.numberSet1 = NumberSet.NumberSet(0)
+        self.numberSet = src.NumberSet.NumberSet(18)
+        self.numberSet1 = src.NumberSet.NumberSet(0)
 
     def test_getSize(self):
         self.assertIsNotNone(self.numberSet)

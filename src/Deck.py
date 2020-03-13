@@ -1,7 +1,7 @@
 import sys
 
-import Card
-import NumberSet
+from src.Card import Card
+from src.NumberSet import NumberSet
 
 class Deck():
     def __init__(self, cardSize, cardCount, numberMax):
@@ -9,7 +9,7 @@ class Deck():
         self.__m_cards = []
         self.__m_cardCount = cardCount
         for i in range(cardCount):
-            self.__m_cards.append(Card.Card(i, cardSize, NumberSet.NumberSet(numberMax)))
+            self.__m_cards.append(Card(i, cardSize, NumberSet(numberMax)))
             
     def getCardCount(self):
         """Return an integer: the number of cards in this deck"""

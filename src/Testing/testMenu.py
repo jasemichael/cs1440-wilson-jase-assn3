@@ -1,21 +1,21 @@
 # Tests the Menu and MenuOption Classes
 
 import unittest
-import Menu
+import src.Menu
 
 
 class TestMenu(unittest.TestCase):
     def setUp(self):
-        self.menu = Menu.Menu("Deck")
+        self.menu = src.Menu.Menu("Deck")
         self.menu.addOption("A", "Test option A")
         self.menu.addOption("B", "Test option B")
         self.menu.addOption("C", "Test option C")
         self.menu.addOption("D", "Test option D")
         self.menu.addOption("E", "Test option E")
-        self.menu1 = Menu.Menu("")
+        self.menu1 = src.Menu.Menu("")
 
     def test_addOption(self):
-        menu = Menu.Menu("Test")
+        menu = src.Menu.Menu("Test")
         menu.addOption("A", "Test option A")
         menu.addOption("", "")
         self.assertNotEqual(menu.getOptionCount(), 2)

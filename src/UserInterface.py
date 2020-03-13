@@ -1,5 +1,5 @@
-import Deck
-import Menu
+from src.Deck import Deck
+from src.Menu import Menu
 
 class UserInterface():
     def __init__(self):
@@ -9,7 +9,7 @@ class UserInterface():
     def run(self):
         """Present the main menu to the user and repeatedly prompt for a valid command"""
         print("Welcome to the Bingo! Deck Generator\n")
-        menu = Menu.Menu("Main")
+        menu = Menu("Main")
         menu.addOption("C", "Create a new deck")
         
         keepGoing = True
@@ -39,14 +39,14 @@ class UserInterface():
             print("That is not a valid number of cards!\n")
             num_cards = self.__getNumberInput("Number of Cards: ", )
         # TODO: Create a new deck
-        self.__m_currentDeck = Deck.Deck(size, num_cards, max_num)
+        self.__m_currentDeck = Deck(size, num_cards, max_num)
         # TODO: Display a deck menu and allow use to do things with the deck
         self.__deckMenu()
 
 
     def __deckMenu(self):
         """Present the deck menu to user until a valid selection is chosen"""
-        menu = Menu.Menu("Deck")
+        menu = Menu("Deck")
         menu.addOption("P", "Print a card to the screen")
         menu.addOption("D", "Display the whole deck to the screen")
         menu.addOption("S", "Save the whole deck to a file")
