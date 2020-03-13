@@ -1,22 +1,23 @@
 import sys
-
 import NumberSet
 
 class Card():
     def __init__(self, idnum, size, numberSet):
         """Card constructor"""
-        pass
+        self.id = idnum
+        self.size = size
+        self.numberSet = numberSet
 
 
     def getId(self):
         """Return an integer: the ID number of the card"""
-        pass
+        return self.id
 
     def getSize(self):
         """Return an integer: the size of one dimension of the card.
         A 3x3 card will return 3, a 5x5 card will return 5, etc.
         """
-        pass
+        return self.size
 
     def print(self, file=sys.stdout):
         """void function:

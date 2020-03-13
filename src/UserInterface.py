@@ -3,7 +3,7 @@ import Menu
 
 class UserInterface():
     def __init__(self):
-        pass
+        self.__m_currentDeck = None
 
 
     def run(self):
@@ -16,7 +16,7 @@ class UserInterface():
         while keepGoing:
             command = menu.show()
             if command == "C":
-                pass
+                self.__createDeck()
             elif command == "X":
                 keepGoing = False
 
@@ -24,11 +24,13 @@ class UserInterface():
     def __createDeck(self):
         """Command to create a new Deck"""
         # TODO: Get the user to specify the card size, max number, and number of cards
-
+        size = self.__getNumberInput("Card Size: ")
+        max_num = self.__getNumberInput("Max Number: ")
+        num_cards = self.__getNumberInput("Number of Cards: ")
         # TODO: Create a new deck
-
+        self.__m_currentDeck = Deck()
         # TODO: Display a deck menu and allow use to do things with the deck
-        pass
+        self.__deckMenu()
 
 
     def __deckMenu(self):
@@ -69,3 +71,9 @@ class UserInterface():
             self.__m_currentDeck.print(outputStream)
             outputStream.close()
             print("Done!")
+
+    def __getNumberInput(self, prompt):
+        return int(input(prompt))
+
+    def __getStringInput(self, prompt):
+        return input(prompt)

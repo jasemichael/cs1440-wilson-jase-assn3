@@ -3,11 +3,11 @@ import random
 class NumberSet():
     def __init__(self, size):
         """NumberSet constructor"""
-        pass
+        self.size = size
 
     def getSize(self):
         """Return an integer: the size of the NumberSet"""
-        pass
+        return self.size
 
     def get(self, index):
         """Return an integer: get the number from this NumberSet at an index"""

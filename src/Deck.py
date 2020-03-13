@@ -6,7 +6,9 @@ import NumberSet
 class Deck():
     def __init__(self, cardSize, cardCount, numberMax):
         """Deck constructor"""
-        pass
+        self.cards = []
+        for i in range(cardCount):
+            self.cards.append(Card(i, cardSize, NumberSet))
             
     def getCardCount(self):
         """Return an integer: the number of cards in this deck"""
