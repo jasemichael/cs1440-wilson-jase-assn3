@@ -8,5 +8,5 @@ March 11th, 2020
 Started implementation. 
 
 March 13th, 2020 
-Finished implementation. Validated my code with unit tests.
+Finished implementation. Validated my code with unit tests. Updated UML and plan.
 
